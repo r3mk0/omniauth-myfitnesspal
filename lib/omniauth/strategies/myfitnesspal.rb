@@ -6,9 +6,13 @@ module OmniAuth
       option :name, 'myfitnesspal'
 
       option :client_options, {
-        :site          => 'https://www.myfitnesspal.com',
-        :authorize_url => '/oauth2/authorize',
-        :token_url     => '/oauth2/token'
+        :site             => 'https://www.myfitnesspal.com',
+        :authorize_url    => '/oauth2/authorize',
+        :token_url        => '/oauth2/token',
+        :authorize_params => {
+          scope: 'diary_read',
+          access_type: 'offline'
+        }
       }
     end
   end
