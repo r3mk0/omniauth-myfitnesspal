@@ -8,9 +8,9 @@ module OmniAuth
       option :authorize_options, [:scope, :access_type]
 
       option :client_options, {
-        :site             => 'https://www.myfitnesspal.com',
-        :authorize_url    => '/oauth2/authorize',
-        :token_url        => '/oauth2/token'
+        :site             => 'https://api.myfitnesspal.com',
+        :authorize_url    => '/v2/oauth2/auth',
+        :token_url        => '/v2/oauth2/token'
       }
     end
   end
