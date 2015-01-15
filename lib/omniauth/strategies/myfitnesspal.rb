@@ -12,6 +12,9 @@ module OmniAuth
         :authorize_url    => '/v2/oauth2/auth',
         :token_url        => '/v2/oauth2/token'
       }
+
+      uid { access_token['user_id'] }
+
     end
   end
 end
